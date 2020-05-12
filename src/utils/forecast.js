@@ -13,7 +13,7 @@ const forecast = (lat,long, callback) => {
     }else{
       const curr = response.body.current
       const loc = response.body.location
-      callback(undefined, `${curr.weather_descriptions[0]}. It is ${curr.temperature} degrees out in ${loc.name}, ${loc.region}, ${loc.country} till ${curr.observation_time}. It feels like ${curr.feelslike} degrees. Probability of precipitation is ${curr.precip}`)
+      callback(undefined, `${curr.weather_descriptions[0]}. It is ${curr.temperature} degrees out in ${loc.name}, ${loc.region}, ${loc.country} till ${curr.observation_time}. It feels like ${curr.feelslike} degrees. Probability of precipitation is ${curr.precip}. Humidity is ${curr.humidity}%.`)
     }
   });
 }
