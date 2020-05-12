@@ -1,5 +1,5 @@
 const request = require('request')
-const keys = require('./../config')
+const keys = require('./../sample-config')
 
 const forecast = (lat,long, callback) => {
 
