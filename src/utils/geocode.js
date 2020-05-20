@@ -1,8 +1,7 @@
 const request = require('request')
-const keys = require('./../sample-config')
 
 const geocode = (address, callback) => {
-  const geourl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${keys.MAP_KEY}&limit=1`
+  const geourl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${process.env.MAP_KEY}&limit=1`
 
   request({ url: geourl, json:true }, (error, response) => {
     if(error){

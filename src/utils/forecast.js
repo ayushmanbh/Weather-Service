@@ -1,9 +1,8 @@
 const request = require('request')
-const keys = require('./../sample-config')
 
 const forecast = (lat,long, callback) => {
 
-  const url = `http://api.weatherstack.com/current?access_key=${keys.API_KEY}&query=${lat},${long}`
+  const url = `http://api.weatherstack.com/current?access_key=${process.env.API_KEY}&query=${lat},${long}`
 
   request({ url: url, json: true }, (error, response) => {
     if(error){
